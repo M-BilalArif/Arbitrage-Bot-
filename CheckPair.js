@@ -1,5 +1,5 @@
 const { Web3 } = require('web3');
-const web3 = new Web3('https://hidden-proud-cloud.bsc.quiknode.pro/ ');
+const web3 = new Web3('https://hidden-proud-cloud.bsc.quiknode.pro/');
 
 const factoryAddresses = {
   PancakeSwap: '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73',
@@ -44,7 +44,7 @@ async function getAllPairAddresses(token0, token1) {
 
 // Tokens
 const token0 = '0x55d398326f99059fF775485246999027B3197955'; // USDT
-const token1 = '0x25d887Ce7a35172C62FeBFD67a1856F20FaEbB00'; // BTCB
+const token1 = '0x78F5d389F5CDCcFc41594aBaB4B0Ed02F31398b3'; // BTCB
 
 // Fetch and display all pair addresses
 getAllPairAddresses(token0, token1)

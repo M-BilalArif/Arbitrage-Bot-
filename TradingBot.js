@@ -136,7 +136,7 @@
 
 
 const { Web3 } = require('web3');
-const web3 = new Web3('https://hidden-proud-cloud.bsc.quiknode.pro/ ');
+const web3 = new Web3('https://hidden-proud-cloud.bsc.quiknode.pro/');
 
 // Router addresses of the different DEXes
 const routerAddresses = {
@@ -149,7 +149,7 @@ const routerAddresses = {
 const routerABI = require('./getAmountOutABI'); // Same ABI used for all routers
 
 // Function to fetch price from a specific DEX router
-const fetchPriceFromRouter = async (amountIn, tokenIn, tokenOut, routerName, routerAddress) => {
+const  fetchPriceFromRouter = async  (amountIn, tokenIn, tokenOut, routerName, routerAddress) => {
   try {
     const routerContract = new web3.eth.Contract(routerABI, routerAddress);
     const amounts = await routerContract.methods
@@ -180,10 +180,10 @@ const fetchPrices = async (amountIn, tokenIn, tokenOut) => {
 
 // Tokens (Example: USDT and BTCB)
 const tokenIn = '0x55d398326f99059fF775485246999027B3197955'; // USDT
-const tokenOut = '0x2170ed0880ac9a755fd29b2688956bd959f933f8'; // BTCB
+const tokenOut = '0x78F5d389F5CDCcFc41594aBaB4B0Ed02F31398b3'; // BTCB
 
 // Fetch and display prices from all DEXes
-fetchPrices('10000000000000000000000', tokenIn, tokenOut)
+fetchPrices('100000000000000000000', tokenIn, tokenOut)
   .then(({ availablePrices, unavailablePrices }) => {
     console.log('Available Prices:');
     availablePrices.forEach(({ routerName, price }) =>

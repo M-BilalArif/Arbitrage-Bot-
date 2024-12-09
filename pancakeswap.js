@@ -1,5 +1,5 @@
 const { Web3 } = require('web3');
-const web3 = new Web3('https://hidden-proud-cloud.bsc.quiknode.pro/ ');
+const web3 = new Web3('https://hidden-proud-cloud.bsc.quiknode.pro/');
 
 const routerAddress = '0x10ED43C718714eb63d5aA57B78B54704E256024E'; // Router address of the DEX
 const BabySwap= '0x325E343f1dE602396E256B67eFd1F61C3A6B38Bd';
